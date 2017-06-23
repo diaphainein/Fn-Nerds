@@ -1,0 +1,20 @@
+{
+  "name": "fn-nerds",
+  "version": "1.0.0",
+  "description": "A newbie friendly, browser-based D&amp;D gameplay application.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diaphainein/Fn-Nerds.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diaphainein/Fn-Nerds/issues"
+  },
+  "homepage": "https://github.com/diaphainein/Fn-Nerds#readme"
+}
