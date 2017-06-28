@@ -2,7 +2,7 @@ CREATE DATABASE `character_sheets`;
 USE `character_sheets`;
 
 CREATE TABLE `human` (
-	`id` INTEGER(100) AUTO_INCREMENT,
+	`character_id` INTEGER(100) AUTO_INCREMENT,
 	`class` VARCHAR(50) NOT NULL,
 --	`character_name` VARCHAR(50) NOT NULL,
 --	`date_created` TIMESTAMP,
@@ -28,7 +28,7 @@ VALUES ("Barbarian", 16, 13, 9, 14, 15, 11, "rage, unarmed defense", "handaxe, j
     
     
 CREATE TABLE `dragonborn` (
-	`id` INTEGER(100) AUTO_INCREMENT,
+	`character_id` INTEGER(100) AUTO_INCREMENT,
 	`class` VARCHAR(50) NOT NULL,
 --	`character_name` VARCHAR(50) NOT NULL,
 --	`date_created` TIMESTAMP,
@@ -49,7 +49,7 @@ VALUES ("Sorcerer", 14, 10, 10, 13, 14, 16, "spellcasting, dragon reslience", "q
 
 
 CREATE TABLE `halfling` (
-	`id` INTEGER(100) AUTO_INCREMENT,
+	`character_id` INTEGER(100) AUTO_INCREMENT,
 	`class` VARCHAR(50) NOT NULL,
 --	`character_name` VARCHAR(50) NOT NULL,
 --	`date_created` TIMESTAMP,
@@ -71,7 +71,7 @@ VALUES ("Rogue", 14, 10, 12, 14, 17, 13,9, "nimbleness, sneak attack", "thieves'
 
 
 CREATE TABLE `dwarf` (
-	`id` INTEGER(100) AUTO_INCREMENT,
+	`character_id` INTEGER(100) AUTO_INCREMENT,
 	`class` VARCHAR(50) NOT NULL,
 --	`character_name` VARCHAR(50) NOT NULL,
 --	`date_created` TIMESTAMP,
@@ -91,7 +91,7 @@ INSERT INTO `dwarf` (`class`, `strength`, `wisdom`, `intelligence`, `dexterity`,
 VALUES ("Cleric", 18, 14,19,10, 8,17,13, "stonecunning, spellcasting", "shield, warhammer");
 
 CREATE TABLE `half-elf` (
-	`id` INTEGER(100) AUTO_INCREMENT,
+	`character_id` INTEGER(100) AUTO_INCREMENT,
 	`class` VARCHAR(50) NOT NULL,
 --	`character_name` VARCHAR(50) NOT NULL,
 --	`date_created` TIMESTAMP,
@@ -112,7 +112,7 @@ VALUES ("Bard", 15, 7, 10, 13, 19, 15, 19, "spellcasting, darkvision", "crossbow
 
 
 CREATE TABLE `high elf` (
-	`id` INTEGER(100) AUTO_INCREMENT,
+	`character_id` INTEGER(100) AUTO_INCREMENT,
 	`class` VARCHAR(50) NOT NULL,
 --	`character_name` VARCHAR(50) NOT NULL,
 --	`date_created` TIMESTAMP,
@@ -133,7 +133,7 @@ VALUES ("Fighter", 17, 10, 13, 19, 19, 13, 8, "trance, fighting style: dueling")
 ("Wizard" 13, 10, 14, 19, 19, 12, 7, "spellcasting, fey ancestry", "spellbook, wand");
 
 CREATE TABLE `drow` (
-	`id` INTEGER(100) AUTO_INCREMENT,
+	`character_id` INTEGER(100) AUTO_INCREMENT,
 	`class` VARCHAR(50) NOT NULL,
 --	`character_name` VARCHAR(50) NOT NULL,
 --	`date_created` TIMESTAMP,
@@ -153,7 +153,7 @@ INSERT INTO `drow` (`class`, `strength`, `wisdom`, `intelligence`, `dexterity`, 
 VALUES ("Rogue", 14, 8, 13, 14, 19, 10, 19, "expertise, superior darkvision", "disguise kit, dagger");
 
 CREATE TABLE `half-orc` (
-	`id` INTEGER(100) AUTO_INCREMENT,
+	`character_id` INTEGER(100) AUTO_INCREMENT,
 	`class` VARCHAR(50) NOT NULL,
 --	`character_name` VARCHAR(50) NOT NULL,
 --	`date_created` TIMESTAMP,
@@ -173,7 +173,7 @@ INSERT INTO `half-orc` (`class`, `strength`, `wisdom`, `intelligence`, `dexterit
 VALUES ("Paladin", 16, 19, 12, 7, 10, 16, 16, "divine sense, savage attacks", "chain mail, spear");
 
 CREATE TABLE `tiefling` (
-	`id` INTEGER(100) AUTO_INCREMENT,
+	`character_id` INTEGER(100) AUTO_INCREMENT,
 	`class` VARCHAR(50) NOT NULL,
 --	`character_name` VARCHAR(50) NOT NULL,
 --	`date_created` TIMESTAMP,
@@ -193,7 +193,7 @@ INSERT INTO `tiefling` (`class`, `strength`, `wisdom`, `intelligence`, `dexterit
 VALUES ("Warlock", 14, 7, 10, 14, 17, 16, 19, "darkvision, spellcasting", "wand, two daggers");
 
 CREATE TABLE `wood elf` (
-	`id` INTEGER(100) AUTO_INCREMENT,
+	`character_id` INTEGER(100) AUTO_INCREMENT,
 	`class` VARCHAR(50) NOT NULL,
 --	`character_name` VARCHAR(50) NOT NULL,
 --	`date_created` TIMESTAMP,
