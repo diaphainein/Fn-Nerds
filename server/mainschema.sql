@@ -2,7 +2,7 @@ CREATE DATABASE `main_db`;
 USE `main_db`;
 
 CREATE TABLE `character_sheets` (
-	`character_id` INTEGER AUTO_INCREMENT,
+	`id` INTEGER AUTO_INCREMENT,
 	`class` VARCHAR(50) NOT NULL,
 	`race` VARCHAR(20) NOT NULL,
 	`strength` INTEGER(20) NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE `character_sheets` (
 	`charisma` INTEGER(20) NOT NULL,
 	`special_abilities` VARCHAR(255) NOT NULL,
 	`items` VARCHAR(255),
-	PRIMARY KEY (character_id)
+	PRIMARY KEY (id)
 );
 
 INSERT INTO `character_sheets` (`class`, `race`, `strength`, `wisdom`, `intelligence`, `dexterity`, `constitution`, `charisma`, `special_abilities`, `items`)
@@ -54,31 +54,30 @@ INSERT INTO `character_sheets` (`class`, `race`, `strength`, `wisdom`, `intellig
 VALUES ("Ranger", "Wood Elf", 15, 13, 19, 10, 19, 13, 6, "natural explorer, master of the wild", "longbow (w/60 arrows, flute)";
 
 CREATE TABLE `player_info` (
-	`player_id` INTEGER AUTO_INCREMENT,
+	`id` INTEGER AUTO_INCREMENT,
 	`date_created` TIMESTAMP,
 	`email` VARCHAR(100) NOT NULL,
 	`username` VARCHAR(20) NOT NULL,
-	PRIMARY KEY (player_id),
-	FOREIGN KEY (create_id)
+	PRIMARY KEY (id),
 );
 
 CREATE TABLE `dm_info` (
-	`dm_id` INTEGER AUTO_INCREMENT,
+	`id` INTEGER AUTO_INCREMENT,
 	`date_created` TIMESTAMP,
 	`email` VARCHAR(100) NOT NULL,
 	`username` VARCHAR(20) NOT NULL,
-	PRIMARY KEY (dm_id),
-	FOREIGN KEY (character_id),
-	FOREIGN KEY (player_id)
+	PRIMARY KEY (id),
+	FOREIGN KEY (character_id) REFERENCES (character_creation(id)),
+	FOREIGN KEY (player_id) REFERENCES (player_info(id))
 );
 
 CREATE TABLE `character_creation` (
-	`create_id` INTEGER AUTO_INCREMENT,
+	`id` INTEGER AUTO_INCREMENT,
 	`character_name` VARCHAR(50) NOT NULL,
 	`date_created` TIMESTAMP,
 	`bio` TEXT NOT NULL,
 	`race` VARCHAR(20) NOT NULL,
 	`class` VARCHAR(20) NOT NULL,
-	PRIMARY KEY (create_id),
-	FOREIGN KEY (character_id)
+	PRIMARY KEY (id),
+	FOREIGN KEY (player_id) REFERENCES (player_info(id)) ON DELETE CASCADE
 );
