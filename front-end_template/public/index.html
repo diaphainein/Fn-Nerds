@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="robots" content="all,follow">
+    <meta name="googlebot" content="index,follow,snippet,archive">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <title>
+        Huge Fn Nerds App
+    </title>
+
+    <meta name="keywords" content="">
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100' rel='stylesheet' type='text/css'>
+
+    <!-- styles -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+
+    <!-- theme stylesheet -->
+    <link href="css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+
+    <!-- your stylesheet with modifications -->
+    <!-- <link href="css/custom.css" rel="stylesheet">-->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <link rel="shortcut icon" href="favicon.png">
+
+    <script type="text/javascript">
+    //var randNum = Math.floor(Math.random() * 20) +1;
+         
+    $(document).ready(function(){
+    //Show user the random number to match
+        $("#roll-btn").on("click", function(){
+            $(".random-number").text(Math.floor(Math.random() * 20) +1);
+        });
+    });
+
+    
+
+
+    </script>
+
+
+
+</head>
+
+<body>
+
+    <!-- *** TOPBAR ***
+ _________________________________________________________ -->
+    
+    <div id="top">
+        <div class="container">
+            <div class="col-md-6" data-animate="fadeInDown">
+                <a href="#" class="btn btn-success btn-sm" data-animate-hover="shake">Huge Fn Nerds</a>
+            </div>
+            <div class="col-md-6" data-animate="fadeInDown">
+                <ul class="menu">
+                    <li><a href="register.html">Login</a>
+                    </li>
+                    <li><a href="register.html">Register</a>
+                    </li>
+                    <li><a href="lobby.html">Lobby</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- *** TOP BAR END *** -->
+
+    <!-- *** NAVBAR ***
+ _________________________________________________________ -->
+
+   <div id="all">
+
+        <div id="content">
+
+            <div class="container">
+                <div class="col-md-12">
+                    <div id="main-slider">
+                        <div class="item">
+                            <img src="./img/map.jpg" alt="" class="img-responsive">
+                        </div>
+                    </div>
+                    <!-- /#main-slider -->
+                </div>
+            </div>
+
+            <!-- *** ADVANTAGES HOMEPAGE ***
+ _________________________________________________________ -->
+            <div id="advantages">
+
+                <div class="container">
+                    <div class="same-height-row">
+                        <div class="col-sm-4">
+                            <div class="box same-height">
+                                <h3><a href="#">Chat</a></h3>
+                                <div id="userFormArea" class="row">
+                                    <div class="col-md-12">
+                                        <form id="userForm">
+                                            <div class="form-group">
+                                                <label>Enter Username</label>
+                                                <input class="form-control" id="username" />
+                                                <br />
+                                                <input type="submit" class="btn btn-primary" value="Login" />
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div id="messageArea" class="row">
+                                    <div class="col-md-12">
+                                        <h3>Online Users</h3>
+                                        <ul class="list-group" id="users"></ul>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="chat" id="chat"></div>
+
+                                        <form id="messageForm">
+                                            <div class="form-group">
+                                                <label>Enter Message</label>
+                                                <textarea class="form-control" id="message"></textarea>
+                                                <br />
+                                                <input type="button" class="btn btn-primary" value="Send Message" />
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="box same-height text-left">
+                                <h3><a href="character-shit.html">Character Sheet</a></h3>
+                                <p><a href="character-shit.html">Click here to go to character sheet page</a></p>
+                                <p>Stats n shit</p>
+                                <p>`class` VARCHAR(50) NOT NULL,</p>
+                                <p>`race` VARCHAR(20) NOT NULL,</p>
+                                <p>`strength` INTEGER(20) NOT NULL,</p>
+                                <p>`wisdom` INTEGER(20) NOT NULL,</p>
+                                <p>`intelligence` INTEGER(20) NOT NULL,</p>
+                                <p>`dexterity` INTEGER(20) NOT NULL,</p>
+                                <p>`constitution` INTEGER(20) NOT NULL,</p>
+                                <p>`charisma` INTEGER(20) NOT NULL,</p>
+                                <p>`special_abilities` VARCHAR(255) NOT NULL,</p>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="box same-height">
+                                <h3><a href="#">Roll For Your Life</a></h3>
+                               <p><button type="button" id="roll-btn" class="btn btn-success">Roll Dice</button></p>
+                               <h3 class="h3 random-number"></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+
+                </div>
+                <!-- /.container -->
+
+            </div>
+            <!-- /#advantages -->
+
+            <!-- *** ADVANTAGES END *** -->
+
+  
+
+        <!-- *** COPYRIGHT ***
+ _________________________________________________________ -->
+        <div id="copyright">
+            <div class="container">
+                <div class="col-md-6">
+                    <p class="pull-left">© 2017 Huugest Fn Nerds Around</p>
+
+                </div>
+                <div class="col-md-6">
+                    <!--<p class="pull-right">Template by <a href="https://bootstrapious.com/e-commerce-templates">Bootstrapious.com</a>
+                         Not removing these links is part of the license conditions of the template. Thanks for understanding :) If you want to use the template without the attribution links, you can do so after supporting further themes development at https://bootstrapious.com/donate 
+                    </p> -->
+                </div>
+            </div>
+        </div>
+        <!-- *** COPYRIGHT END *** -->
+
+
+
+    </div>
+    <!-- /#all -->
+
+
+    
+
+    <!-- *** SCRIPTS TO INCLUDE ***
+ _________________________________________________________ -->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/bootstrap-hover-dropdown.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/front.js"></script>
+    <script src="js/chat.js"></script>
+
+
+</body>
+
+</html>
