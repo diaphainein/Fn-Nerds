@@ -1657,6 +1657,11 @@ address {
   border-color: #CC527A;
 }
 
+.btn-primary:focus {
+  background-color: #E8175D;
+  border-color: #E8175D;
+}
+
 .btn-success:hover {
   background-color: #E8175D;
   border-color: #E8175D;
